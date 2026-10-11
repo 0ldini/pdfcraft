@@ -570,6 +570,23 @@ impl PdfCraftApp {
             "page.duplicate" => {
                 self.apply_edit(Edit::DuplicatePages { pages: targets });
             }
+            "ocr.enhance_camera" => {
+                // The corners start on the document's edges when they can be found, else
+                // inset on the current page (camera_ui::page_input).
+                self.quick_tool = crate::QuickTool::EnhanceCamera;
+                if let Some(i) = self.active
+                    && let Some(view) = self.views.get_mut(i)
+                    && let Some(page) = self.session.get(view.id).and_then(|d| d.info.pages.get(view.current).cloned())
+                {
+                    view.camera_done = None;
+                    view.camera = self.session.detect_camera_corners(view.id, view.current).map(|found| crate::camera_ui::CameraQuad {
+                        page: view.current,
+                        corners: found.map(|[x, y]| page.user_to_view(x as f32, y as f32)),
+                        grab: None,
+                    });
+                }
+                self.notify_tr("Drag the corners onto the document's edges, then choose Enhance page.");
+            }
             "page.crop" => {
                 self.quick_tool = crate::QuickTool::Crop;
                 self.notify_tr("Drag a rectangle on a page to crop it; double-click a page for Set Page Boxes");
