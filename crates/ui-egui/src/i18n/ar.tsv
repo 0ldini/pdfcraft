@@ -2232,6 +2232,10 @@ key	Space	مسافة
 	Panels	اللوحات
 	Resize panels	تغيير حجم اللوحات
 	Resize panel window	تغيير حجم نافذة اللوحة
+	Select page {label}	تحديد الصفحة {label}
+	Rotate page {label} counterclockwise	تدوير الصفحة {label} عكس اتجاه عقارب الساعة
+	Rotate page {label} clockwise	تدوير الصفحة {label} باتجاه عقارب الساعة
+	Delete page {label}	حذف الصفحة {label}
 	Mouse wheel scroll speed	سرعة التمرير بعجلة الماوس
 scroll speed	Slow	بطيئة
 scroll speed	Normal	عادية
