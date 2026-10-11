@@ -100,3 +100,6 @@ display_name = "Mustafa Hadidi"
 real_name = "Lucas"
 display_name = "Lucas"
 sync_github_name = true   # use the name on your public GitHub profile as display name
+
+[people.Losminek]
+sync_github_name = true

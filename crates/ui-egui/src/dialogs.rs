@@ -321,7 +321,7 @@ fn dialogs(app: &mut PdfCraftApp, ctx: &egui::Context) {
                         PropsTab::Advanced => {
                             row(ui, "PDF version", i.pdf_version.clone());
                             row(ui, "Location", crate::bidi::visual(doc.path.as_deref().unwrap_or_default()).into_owned());
-                            row(ui, "File size", format!("{} ({} bytes)", human_size(i.file_size), i.file_size));
+                            row(ui, "File size", format!("{} ({})", human_size(i.file_size), crate::panels::byte_count(i.file_size)));
                             let p = &i.pages[0];
                             row(ui, "Page size", units.size(f64::from(p.width), f64::from(p.height)));
                             row(ui, "Number of pages", i.pages.len().to_string());
