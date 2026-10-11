@@ -2,7 +2,7 @@
 //! stay in PdfCraft; these adapters retain the application's print-error surface.
 
 pub use craft_print::{
-    Duplex, HANDLED_OPTIONS, HAS_PRINTER_PREFERENCES, Job, Printer, PrinterOption, lp_args, lpstat_command, parse_lpoptions, parse_lpstat,
+    Duplex, HANDLED_OPTIONS, HAS_PRINTER_PREFERENCES, Job, Printer, PrinterOption, Scaling, lp_args, lpstat_command, parse_lpoptions, parse_lpstat,
     parse_lpstat_e, parse_ppd, parse_windows_printers, ppd_text, printer_options, printers, printers_parsed,
 };
 

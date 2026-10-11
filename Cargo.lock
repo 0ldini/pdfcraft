@@ -1093,7 +1093,7 @@ dependencies = [
 [[package]]
 name = "craft-print"
 version = "0.1.0"
-source = "git+https://github.com/storytold/craft-libs?rev=c22bb1b0ce6316f84973cb69675fe7331c5886cc#c22bb1b0ce6316f84973cb69675fe7331c5886cc"
+source = "git+https://github.com/storytold/craft-libs?rev=da752825c70574a2423ee55427f8f7aa5b5f8ec8#da752825c70574a2423ee55427f8f7aa5b5f8ec8"
 dependencies = [
  "tempfile",
 ]

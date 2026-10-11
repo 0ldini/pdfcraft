@@ -1,6 +1,6 @@
 # Hardware and platform parity
 
-> **Last reviewed:** 2026-10-10 · **Last updated:** 2026-10-11 · **Change:** minor (shared print spooler; native Windows validation pending) · **Target:** Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)
+> **Last reviewed:** 2026-10-10 · **Last updated:** 2026-10-11 · **Change:** minor (shared print spooler; Windows CI enabled) · **Target:** Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)
 
 Each hardware feature Acrobat Pro uses, per platform, ours against Acrobat's. Acrobat runs on macOS
 and Windows (plus a limited web viewer/editor in Document Cloud); PdfCraft runs on macOS, Windows,

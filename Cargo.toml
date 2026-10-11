@@ -15,7 +15,7 @@ repository = "https://github.com/storytold/pdfcraft"
 # Shared frontend components; engines remain independent of egui.
 craft-ui = { git = "https://github.com/storytold/craft-libs", version = "0.1.0", rev = "5c874d51eeb3de70e735c8ce87a59a7dedd47675", features = ["serde"] }
 # Shared system spooler; document composition remains in pdfcraft-print.
-craft-print = { git = "https://github.com/storytold/craft-libs", version = "0.1.0", rev = "c22bb1b0ce6316f84973cb69675fe7331c5886cc" }
+craft-print = { git = "https://github.com/storytold/craft-libs", version = "0.1.0", rev = "da752825c70574a2423ee55427f8f7aa5b5f8ec8" }
 # internal
 pdfcraft-geom = { path = "crates/geom", version = "0.6.0" }
 pdfcraft-filters = { path = "crates/filters", version = "0.6.0" }

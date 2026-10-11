@@ -194,10 +194,11 @@ fn spooler_arguments_and_printer_list() {
         printer: Some("Office_Laser".into()),
         copies: 3,
         collate: false,
-        duplex: Duplex::LongEdge,
+        duplex: Some(Duplex::LongEdge),
         grayscale: true,
         title: "memo.pdf".into(),
         options: Vec::new(),
+        ..Job::default()
     };
     assert_eq!(
         lp_args(&job).join(" "),
