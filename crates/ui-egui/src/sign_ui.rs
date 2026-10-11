@@ -665,11 +665,11 @@ fn configure(ui: &mut egui::Ui, app: &mut PdfCraftApp, t: &Tokens) -> bool {
                 (tl!("Email Address"), &mut n.email),
             ] {
                 let l = ui.label(label);
-                ui.add(egui::TextEdit::singleline(value).desired_width(260.0)).labelled_by(l.id);
+                ui.add(crate::widgets::line(value).desired_width(260.0)).labelled_by(l.id);
                 ui.end_row();
             }
             let l = ui.label(tl!("Country/Region"));
-            ui.add(egui::TextEdit::singleline(&mut n.country).hint_text("US").char_limit(2).desired_width(60.0)).labelled_by(l.id);
+            ui.add(crate::widgets::line(&mut n.country).hint_text("US").char_limit(2).desired_width(60.0)).labelled_by(l.id);
             ui.end_row();
             ui.label(tl!("Key Algorithm"));
             egui::ComboBox::from_id_salt("key-alg").selected_text(KEY_ALGORITHMS[n.key].0).show_ui(ui, |ui| {
@@ -679,10 +679,10 @@ fn configure(ui: &mut egui::Ui, app: &mut PdfCraftApp, t: &Tokens) -> bool {
             });
             ui.end_row();
             let l = ui.label(tl!("Password"));
-            ui.add(egui::TextEdit::singleline(&mut n.password).password(true).desired_width(200.0)).labelled_by(l.id);
+            ui.add(crate::widgets::line(&mut n.password).password(true).desired_width(200.0)).labelled_by(l.id);
             ui.end_row();
             let l = ui.label(tl!("Confirm Password"));
-            ui.add(egui::TextEdit::singleline(&mut n.confirm).password(true).desired_width(200.0)).labelled_by(l.id);
+            ui.add(crate::widgets::line(&mut n.confirm).password(true).desired_width(200.0)).labelled_by(l.id);
             ui.end_row();
         });
         ui.label(
@@ -694,7 +694,7 @@ fn configure(ui: &mut egui::Ui, app: &mut PdfCraftApp, t: &Tokens) -> bool {
         egui::Grid::new("id-file").num_columns(2).spacing([12.0, 8.0]).show(ui, |ui| {
             let l = ui.label(tl!("File (.p12, .pfx)"));
             ui.horizontal(|ui| {
-                ui.add(egui::TextEdit::singleline(&mut n.file).desired_width(220.0)).labelled_by(l.id);
+                ui.add(crate::widgets::line(&mut n.file).desired_width(220.0)).labelled_by(l.id);
                 #[cfg(not(target_arch = "wasm32"))]
                 if ui.button(tl!("Browse…")).clicked() {
                     browse = true;
@@ -702,7 +702,7 @@ fn configure(ui: &mut egui::Ui, app: &mut PdfCraftApp, t: &Tokens) -> bool {
             });
             ui.end_row();
             let l = ui.label(tl!("Password"));
-            ui.add(egui::TextEdit::singleline(&mut n.file_password).password(true).desired_width(200.0)).labelled_by(l.id);
+            ui.add(crate::widgets::line(&mut n.file_password).password(true).desired_width(200.0)).labelled_by(l.id);
             ui.end_row();
         });
     }
@@ -881,10 +881,10 @@ fn sign_as(ui: &mut egui::Ui, app: &mut PdfCraftApp, t: &Tokens) -> bool {
             ui.end_row();
         }
         let l = ui.label(tl!("Reason"));
-        ui.add(egui::TextEdit::singleline(&mut d.reason).hint_text(tl!("Optional")).desired_width(260.0)).labelled_by(l.id);
+        ui.add(crate::widgets::line(&mut d.reason).hint_text(tl!("Optional")).desired_width(260.0)).labelled_by(l.id);
         ui.end_row();
         let l = ui.label(tl!("Location"));
-        ui.add(egui::TextEdit::singleline(&mut d.location).hint_text(tl!("Optional")).desired_width(260.0)).labelled_by(l.id);
+        ui.add(crate::widgets::line(&mut d.location).hint_text(tl!("Optional")).desired_width(260.0)).labelled_by(l.id);
         ui.end_row();
         if in_os_key_store {
             ui.label("");
@@ -899,7 +899,7 @@ fn sign_as(ui: &mut egui::Ui, app: &mut PdfCraftApp, t: &Tokens) -> bool {
             );
         } else {
             let l = ui.label(tl!("Digital ID password"));
-            let r = ui.add(egui::TextEdit::singleline(&mut d.password).password(true).desired_width(200.0)).labelled_by(l.id);
+            let r = ui.add(crate::widgets::line(&mut d.password).password(true).desired_width(200.0)).labelled_by(l.id);
             if r.lost_focus() && ui.input(|i| i.key_pressed(egui::Key::Enter)) {
                 go = true;
             }
