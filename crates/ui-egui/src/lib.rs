@@ -1230,7 +1230,11 @@ impl PdfCraftApp {
     pub fn open_dialog(&mut self) {
         self.startup_superseded = true;
         #[cfg(not(target_arch = "wasm32"))]
-        self.pick(pickers::PickFor::Open, Self::open_picker(), false);
+        self.pick(
+            pickers::PickFor::Open,
+            rfd::AsyncFileDialog::new().add_filter("PDF", &["pdf"]).add_filter(tl!("Images and text (converted to PDF)"), &create_ui::CONVERTIBLE),
+            true,
+        );
         // Browsers pick files asynchronously; the bytes arrive through `inbox`.
         #[cfg(target_arch = "wasm32")]
         {
