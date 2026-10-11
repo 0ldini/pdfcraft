@@ -92,8 +92,11 @@ fn document_scripts_and_preferences() {
     h.run_steps(2);
     let id = h.state().active_ids().unwrap().1;
     assert_eq!(h.state().session.get(id).unwrap().document_scripts()[0].0, "init");
+    // Main added preferences above JavaScript; keep the checkbox inside this test viewport.
+    h.set_size(egui::vec2(1400.0, 1400.0));
     h.state_mut().dialog = Some(Dialog::Preferences);
-    h.run_steps(2);
+    h.run_steps(4);
+    assert!(h.ctx.content_rect().contains_rect(h.get_by_label("Enable Acrobat JavaScript").rect()));
     h.get_by_label("Enable Acrobat JavaScript").click();
     h.run_steps(2);
     assert!(!h.state().session.javascript());
