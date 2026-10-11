@@ -43,7 +43,9 @@ are removed on success and failure. Other targets offer the print-ready PDF inst
 
 The shared dependency requires Rust 1.95. Transport and native Windows regression tests
 live in craft-libs; local tests retain composition, facade, engine, automation and UI coverage.
-Physical printer output still needs hardware validation.
+The desktop UI discovers printers and submits jobs on workers, so neither operation blocks
+the dialog; the Windows backend starts without a console window. Physical printer output
+still needs hardware validation.
 
 Not yet: the web spooler, print as image, poster labels, PostScript output, colour conversion for
 grayscale.
