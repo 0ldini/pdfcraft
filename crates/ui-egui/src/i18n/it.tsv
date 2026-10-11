@@ -2180,6 +2180,8 @@ signature pad	Type	Digita
 	The field {name} no longer exists.	Il campo {name} non esiste più.
 	A selected field has no widget on any page, so the fields can't be edited together.	Un campo selezionato non ha widget in nessuna pagina, quindi i campi non possono essere modificati insieme.
 	 ({n} at {dpi} dpi, the largest size they can be drawn at)	 ({n} a {dpi} dpi, la dimensione massima a cui si possono disegnare)
+	Margins	Margini
+	For page sizes and margins.	Per formati pagina e margini.
 
 # Multi-object selection and movement (#844)
 @plural	{n} object selected|{n} objects selected	{n} oggetto selezionato|{n} oggetti selezionati
@@ -2226,7 +2228,7 @@ key	Space	Spazio
 	Resize panel window	Ridimensiona finestra pannello
 
 # Architectural print controls (follow-up to #599).
-	PDF page: {w} × {h} in	Pagina PDF: {w} × {h} pollici
+	PDF page: {size}	Pagina PDF: {size}
 	Match page at 100%	Adatta il foglio alla pagina al 100%
 	PDF scale: {scale}%	Scala PDF: {scale}%
 	Printer paper and scaling may differ. Check driver settings.	Carta e scala della stampante possono differire. Controlla le impostazioni del driver.
