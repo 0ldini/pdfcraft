@@ -17,6 +17,10 @@ import pathlib
 import shutil
 import sys
 
+# Windows-Konsolen nutzen oft eine Codepage ohne «→» und Umlaute.
+for stream in (sys.stdout, sys.stderr):
+    stream.reconfigure(encoding="utf-8", errors="replace")
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 WERK = ROOT / "werk"
 CFG = json.loads((WERK / "werk.json").read_text(encoding="utf-8"))
