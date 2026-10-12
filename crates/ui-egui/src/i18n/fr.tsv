@@ -838,6 +838,7 @@
 	{verb} as "{name}"	{verb} en tant que «{name}»
 	Certify	Certifier
 	The signature will be invisible.	La signature sera invisible.
+	The existing action will be preserved.	L’action existante sera conservée.
 	Distinguished name	Nom distinctif
 	Labels	Étiquettes
 	Graphic	Graphique
@@ -2302,3 +2303,7 @@ scroll speed	Fast	Rapide
 	Ink sensitivity	Sensibilité à l’encre
 	No signature was found in the frame. Move the frame over the signature or raise the ink sensitivity.	Aucune signature trouvée dans le cadre. Placez le cadre sur la signature ou augmentez la sensibilité à l’encre.
 	Couldn't use the photo: {e}	Impossible d’utiliser la photo : {e}
+	Couldn't follow linked PDF: {reason}	Impossible de suivre le PDF lié : {reason}
+	The linked PDF opened, but its named destination was not applied.	Le PDF lié s'est ouvert, mais sa destination nommée n'a pas été appliquée.
+	The linked PDF opened, but its page destination was out of range.	Le PDF lié s'est ouvert, mais sa page de destination est hors limites.
+	Local cross-PDF links require the desktop app	Les liens locaux entre PDF nécessitent l'application de bureau

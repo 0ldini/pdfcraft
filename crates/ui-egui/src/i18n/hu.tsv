@@ -835,6 +835,7 @@
 	{verb} as "{name}"	{verb} mint „{name}”
 	Certify	Hitelesítés
 	The signature will be invisible.	Az aláírás láthatatlan lesz.
+	The existing action will be preserved.	A meglévő művelet megmarad.
 	Distinguished name	Megkülönböztető név
 	Labels	Címkék
 	Graphic	Grafika
@@ -2301,3 +2302,7 @@ scroll speed	Fast	Gyors
 	Ink sensitivity	Tintaérzékenység
 	No signature was found in the frame. Move the frame over the signature or raise the ink sensitivity.	A keretben nem található aláírás. Húzza a keretet az aláírásra, vagy növelje a tintaérzékenységet.
 	Couldn't use the photo: {e}	A fénykép nem használható: {e}
+	Couldn't follow linked PDF: {reason}	A hivatkozott PDF nem nyitható meg: {reason}
+	The linked PDF opened, but its named destination was not applied.	A hivatkozott PDF megnyílt, de a nevesített cél nem lett alkalmazva.
+	The linked PDF opened, but its page destination was out of range.	A hivatkozott PDF megnyílt, de a céloldal a tartományon kívül esik.
+	Local cross-PDF links require the desktop app	A PDF-ek közötti helyi hivatkozásokhoz az asztali alkalmazás szükséges

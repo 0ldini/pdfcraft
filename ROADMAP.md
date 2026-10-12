@@ -2,6 +2,7 @@
 
 **Stage: alpha** · next: beta, ~26% (ready for real work 49% → 75%) and ~400–700 h away
 
+> **Last reviewed:** 2026-10-12 · **Last updated:** 2026-10-12 · **Change:** minor (M7 #1200 candidate: local GoToR links and confined automation; estimates unchanged) · **Target:** Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)
 > **Last reviewed:** 2026-10-12 · **Last updated:** 2026-10-12 · **Change:** exclusive image-crop resize follow-up; minor (M2 short same-line redraws split before placement; estimates unchanged) · **Target:** Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)
 > **Last reviewed:** 2026-10-10 · **Last updated:** 2026-10-12 · **Change:** minor (M10, #1028: OCR reads pictures on pages that have text, on request); earlier: M14 #307 Plan 3 uses one marker traversal on open and full refresh, and the combined scanner borrows metadata instead of cloning scan-only containers; includes a behavior-preserving `organize` binding for the workspace Clippy gate · earlier: minor (localized shortcut labels, #496; readiness table with hours per audience; full number as weighted sum 49%; second look: ready 40% → 47%, mainstream 55% added; core-workflow gate applied → alpha) · **Target:** Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)
 > **Last reviewed:** 2026-10-10 · **Last updated:** 2026-10-11 · **Change:** minor (#594 paragraph drags validated in the Linux test environment; localized shortcut labels, #496; readiness table with hours per audience; full number as weighted sum 49%; earlier: second look: ready 40% → 47%, mainstream 55% added; core-workflow gate applied → alpha) · **Target:** Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)
@@ -137,6 +138,7 @@ Ranked; detail and the full milestone table in [docs/roadmap.md](docs/roadmap.md
 
 ## Progress log
 
+- **2026-10-12 (M7, #1200 candidate):** Bounded local GoToR file specifications open in desktop tabs; explicit numeric page views apply, while named destinations open at the default view with a warning. The automation tool resolves relative to the source and uses existing `--root` confinement. Appearance-only Link Properties edits preserve the existing action. URL/network paths remain refused; `/NewWindow` is a tab hint. Estimates unchanged.
 - **2026-10-12 (M7, private image crops):** Exclusive image crops resize with their pixels across nested states, intervening operators and content streams; shared clips remain fixed. Synthetic engine/tool regressions and private image save/reopen checks; estimates unchanged.
 
 - **2026-10-12 (M12, accessibility finding locations):** Checker findings for figures, annotations and form widgets carry verified page bounds. Selecting one flashes its location; the headless check returns the same PDF-space rectangle. Malformed annotation rectangles remain page-only findings. Guided review and tagging estimates unchanged.
@@ -386,6 +388,7 @@ Newest first: the date, what moved, and the new overall estimate.
 
 | Date | Change | Summary |
 |---|---|---|
+| 2026-10-12 | minor | M7/#1200 candidate: bounded local GoToR opening, root-confined automation, and action-preserving appearance edits; named destinations and window behavior remain partial; estimates unchanged. |
 | 2026-10-12 | minor | Exclusive image crops resize with their pixels across nested states, intervening operators and content streams; shared clips remain fixed. Synthetic engine/tool regressions and private image save/reopen checks; estimates unchanged. |
 | 2026-10-11 | minor | M10: borderless inferred tables and positioned invoice watermarks (#773); estimates unchanged. |
 | 2026-10-11 | minor | M7: #594 paragraph-drag candidate and source regressions prepared; subsequent Linux validation passed all eight CI gates. Estimates unchanged. |
