@@ -1,0 +1,162 @@
+name: Werk-Release
+
+# Baut die umbenannte Ausgabe (siehe werk/) für Windows, Linux und den Browser und
+# veröffentlicht sie als Release. Der Launcher holt Updates aus diesen Releases.
+#
+# Start: Reiter «Actions» → «Werk-Release» → «Run workflow».
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Versionsnummer, z. B. 0.7.2 (leer: Version aus Cargo.toml)"
+        type: string
+        default: ""
+  push:
+    branches: [werk]
+    paths: ["werk/**", ".github/workflows/werk-release.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: werk-release-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+  CARGO_INCREMENTAL: 0
+  INPUT_VERSION: ${{ inputs.version }}
+
+jobs:
+  build:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { name: Windows, runner: windows-latest, kind: windows }
+          - { name: Linux, runner: ubuntu-22.04, kind: linux }
+          - { name: Browser, runner: ubuntu-latest, kind: web }
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+
+      # Umbenennen, dann Name, Version und Schriften-Stand für die folgenden Schritte festhalten.
+      - name: Werk-Ausgabe vorbereiten
+        run: |
+          if [ "$RUNNER_OS" = "Windows" ]; then PY=python; else PY=python3; fi
+          "$PY" werk/rebrand.py
+          APP=$("$PY" -c "import json; print(json.load(open('werk/werk.json'))['icon_base'])")
+          VERSION="$INPUT_VERSION"
+          if [ -z "$VERSION" ]; then
+            VERSION=$(awk -F'"' '/^\[workspace.package\]/{p=1} p && /^version/{print $2; exit}' Cargo.toml)
+          fi
+          UP=$(echo "$APP" | tr '[:lower:]' '[:upper:]')
+          FONTS_REF=$(sed -n 's/^ *craft-fonts-ref: *\([0-9a-f]\{7,40\}\).*/\1/p' .github/workflows/release.yml | head -1)
+          {
+            echo "APP=$APP"
+            echo "VERSION=$VERSION"
+            echo "${UP}_VERSION=$VERSION"
+            echo "${UP}_BUILD_DATE=$(date -u +%Y-%m-%d)"
+            echo "${UP}_BUILD_SHA=$GITHUB_SHA"
+            echo "FONTS_REF=$FONTS_REF"
+          } >> "$GITHUB_ENV"
+          echo "$APP $VERSION (Schriften: ${FONTS_REF:-keine})"
+
+      - name: Schriften holen
+        if: env.FONTS_REF != '' && matrix.kind != 'web'
+        uses: actions/checkout@v4
+        with:
+          repository: storytold/craft-fonts
+          ref: ${{ env.FONTS_REF }}
+          path: craft-fonts
+
+      - name: Schriften einbinden
+        if: env.FONTS_REF != '' && matrix.kind != 'web'
+        run: echo "CRAFT_FONTS_DIR=$GITHUB_WORKSPACE/craft-fonts" >> "$GITHUB_ENV"
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.kind == 'web' && 'wasm32-unknown-unknown' || '' }}
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          key: werk-${{ matrix.kind }}
+
+      - name: Versionsnummer setzen
+        if: inputs.version != ''
+        run: cargo xtask version set "$VERSION"
+
+      - name: Windows bauen
+        if: matrix.kind == 'windows'
+        shell: pwsh
+        run: |
+          dotnet tool install --global wix --version 5.0.2
+          wix extension add -g "WixToolset.UI.wixext/5.0.2" "WixToolset.Util.wixext/5.0.2"
+          ./packaging/windows/package.ps1 -Arch x64
+
+      - name: Linux-Abhängigkeiten
+        if: matrix.kind == 'linux'
+        uses: storytold/craft-common-actions/actions/install-linux-deps@main
+
+      - name: Linux bauen
+        if: matrix.kind == 'linux'
+        run: packaging/linux/package.sh --formats "tar"
+
+      - name: Trunk installieren
+        if: matrix.kind == 'web'
+        uses: storytold/craft-common-actions/actions/install-trunk@main
+
+      - name: Browser-Version bauen
+        if: matrix.kind == 'web'
+        run: packaging/web/package.sh
+
+      # Nur die Dateien, die der Launcher braucht. Der MSI-Installer bleibt draussen: er trägt
+      # dieselbe Kennung wie das Original und würde dessen Installation ersetzen.
+      - name: Dateien auswählen
+        run: |
+          mkdir -p werk-out
+          shopt -s nullglob
+          for f in dist/release/*-portable.zip dist/release/"$APP-$VERSION"-linux-*.tar.gz dist/release/*-web-*.zip; do
+            cp "$f" werk-out/
+          done
+          ls -l werk-out
+          [ -n "$(ls -A werk-out)" ] || { echo "::error::keine Release-Datei entstanden"; ls -l dist/release || true; exit 1; }
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: werk-${{ matrix.kind }}
+          path: werk-out/*
+          if-no-files-found: error
+
+  release:
+    name: Veröffentlichen
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: out
+          merge-multiple: true
+      - name: Release anlegen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NAME=$(python3 -c "import json; print(json.load(open('werk/werk.json'))['name'])")
+          cd out
+          VERSION=$(ls *-web-*.zip | sed -E 's/.*-web-(.*)\.zip/\1/')
+          sha256sum * > SHA256SUMS.txt
+          cat SHA256SUMS.txt
+          TAG="v$VERSION"
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$TAG" * --clobber --repo "$GITHUB_REPOSITORY"
+          else
+            gh release create "$TAG" * --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
+              --title "$NAME $VERSION" \
+              --notes "$NAME $VERSION für Windows, Linux und den Browser. Installation und Updates über den Werkbank-Launcher."
+          fi

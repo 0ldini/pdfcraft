@@ -1,0 +1,9 @@
+{
+  "name": "Blattwerk",
+  "original": "PdfCraft",
+  "suite": "Werkbank",
+  "github": "0ldini/pdfcraft",
+  "upstream": "storytold/pdfcraft",
+  "icon_base": "pdfcraft",
+  "app_id": "ai.storyteller.pdfcraft"
+}
