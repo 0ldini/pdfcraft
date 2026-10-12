@@ -2221,6 +2221,9 @@ key	Space	Интервал
 scroll speed	Slow	Ниска
 scroll speed	Normal	Нормална
 scroll speed	Fast	Висока
+	Animation effects	Анимационни ефекти
+animation effects	On	Включени
+animation effects	Off	Изключени
 	Enhance camera image	Подобри снимка от камера
 	Drag the corners onto the document's edges, then choose Enhance page.	Плъзнете ъглите до краищата на документа, след това изберете „Подобри страницата“.
 	Enhance page	Подобри страницата
