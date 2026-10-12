@@ -94,6 +94,7 @@
 	Create PDF from file…	从文件创建 PDF…
 	Create PDF from images…	从图像创建 PDF…
 	Create PDF from multiple files…	从多个文件创建 PDF…
+	Create separate PDFs…	创建单独的 PDF…
 	Create PDF from clipboard	从剪贴板创建 PDF
 	Combine files…	合并文件…
 	Save	保存
@@ -958,6 +959,7 @@
 	Bring your own model (off by default)	自备模型（默认关闭）
 	Single file	单个文件
 	Multiple files	多个文件
+	Separate PDFs	单独的 PDF
 	Images	图像
 	Clipboard	剪贴板
 	Blank page	空白页
@@ -2231,6 +2233,11 @@ scroll speed	Fast	快
 	Tools panel side	工具面板位置
 	Add comment	添加注释
 	Change tag properties	更改标签属性
+	Left out: {names}	已略过：{names}
+	already a PDF	已经是 PDF
+	no unused output name	没有可用的输出文件名
+	no output folder was chosen	未选择输出文件夹
+@plural	Downloaded {n} PDF|Downloaded {n} PDFs	已下载 {n} 个 PDF
 	Scan	扫描
 	Sign a sheet of white paper and take a photo of it in bright, even light (use the flash). Choose the photo or drop it here: PdfCraft finds the signature and removes the paper.	在白纸上签名，并在明亮、均匀的光线下拍照（使用闪光灯）。选择照片或将其拖放到此处：PdfCraft 会找到签名并去除纸张背景。
 	Choose photo…	选择照片…

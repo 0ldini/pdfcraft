@@ -54,6 +54,7 @@
 	Create PDF from file…	Utwórz PDF z pliku…
 	Create PDF from images…	Utwórz PDF z obrazów…
 	Create PDF from multiple files…	Utwórz PDF z wielu plików…
+	Create separate PDFs…	Utwórz osobne pliki PDF…
 	Create PDF from clipboard	Utwórz PDF ze schowka
 	Combine files…	Połącz pliki…
 	Save	Zapisz
@@ -341,6 +342,7 @@
 	Create from	Utwórz z
 	Single file	Pojedynczy plik
 	Multiple files	Wiele plików
+	Separate PDFs	Osobne pliki PDF
 	Images	Obrazy
 	Clipboard	Schowek
 	Blank page	Pusta strona
@@ -2247,6 +2249,11 @@ scroll speed	Fast	Szybka
 	Tools panel side	Strona panelu narzędzi
 	Add comment	Dodaj komentarz
 	Change tag properties	Zmień właściwości znacznika
+	Left out: {names}	Pominięto: {names}
+	already a PDF	to już jest PDF
+	no unused output name	brak wolnej nazwy pliku wyjściowego
+	no output folder was chosen	nie wybrano folderu wyjściowego
+@plural	Downloaded {n} PDF|Downloaded {n} PDFs	Pobrano {n} plik PDF|Pobrano {n} pliki PDF|Pobrano {n} plików PDF
 	Scan	Skanuj
 	Sign a sheet of white paper and take a photo of it in bright, even light (use the flash). Choose the photo or drop it here: PdfCraft finds the signature and removes the paper.	Podpisz się na białej kartce i zrób jej zdjęcie przy jasnym, równomiernym świetle (użyj lampy błyskowej). Wybierz zdjęcie lub upuść je tutaj: PdfCraft znajdzie podpis i usunie papier.
 	Choose photo…	Wybierz zdjęcie…

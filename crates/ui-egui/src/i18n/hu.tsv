@@ -28,6 +28,7 @@
 	Create PDF from file…	PDF létrehozása fájlból…
 	Create PDF from images…	PDF létrehozása képekből…
 	Create PDF from multiple files…	PDF létrehozása több fájlból…
+	Create separate PDFs…	Külön PDF-ek létrehozása…
 	Create PDF from clipboard	PDF létrehozása a vágólapról
 	Combine files…	Fájlok egyesítése…
 	Save	Mentés
@@ -317,6 +318,7 @@
 	Create from	Létrehozás ebből
 	Single file	Egy fájl
 	Multiple files	Több fájl
+	Separate PDFs	Külön PDF-ek
 	Images	Képek
 	Clipboard	Vágólap
 	Blank page	Üres oldal
@@ -2266,6 +2268,11 @@ scroll speed	Fast	Gyors
 	Tools panel side	Az Eszközök panel oldala
 	Add comment	Megjegyzés hozzáadása
 	Change tag properties	Címke tulajdonságainak módosítása
+	Left out: {names}	Kihagyva: {names}
+	already a PDF	már PDF
+	no unused output name	nincs szabad kimeneti név
+	no output folder was chosen	nincs kiválasztva kimeneti mappa
+@plural	Downloaded {n} PDF|Downloaded {n} PDFs	{n} PDF letöltve|{n} PDF letöltve
 	Scan	Beolvasás
 	Sign a sheet of white paper and take a photo of it in bright, even light (use the flash). Choose the photo or drop it here: PdfCraft finds the signature and removes the paper.	Írja alá a nevét egy fehér papírlapon, és fényképezze le erős, egyenletes fényben (vakuval). Válassza ki a fényképet, vagy húzza ide: a PdfCraft megkeresi az aláírást, és eltávolítja a papírt.
 	Choose photo…	Fénykép kiválasztása…
