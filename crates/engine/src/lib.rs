@@ -1210,6 +1210,12 @@ pub enum Edit {
         property: a11y::TagProperty,
         value: Option<String>,
     },
+    /// Move a structure tag before or after a direct sibling in reading order.
+    MoveTag {
+        object: pdfcraft_cos::ObjRef,
+        anchor: pdfcraft_cos::ObjRef,
+        placement: a11y::TagPlacement,
+    },
     /// Add alternate text ▸ Decorative figure: the figure's content becomes an artifact.
     MarkDecorative {
         figure: u32,
@@ -1675,6 +1681,7 @@ impl Edit {
             Edit::SetInitialView(_) => Label::of("Change initial view"),
             Edit::SetAltText { .. } => Label::of("Set alternate text"),
             Edit::SetTagProperty { .. } => Label::of("Change tag properties"),
+            Edit::MoveTag { .. } => Label::of("Move object"),
             Edit::MarkDecorative { .. } => Label::of("Mark figure as decorative"),
             Edit::AddOcrText { .. } => Label::of("Recognize text"),
             Edit::ApplyScriptChanges { .. } => Label::of("Run JavaScript"),
@@ -1862,6 +1869,7 @@ fn check_permission(edit: &Edit, p: &pdfcraft_cos::Permissions) -> Result<(), Ed
         | Edit::SetInitialView(_)
         | Edit::SetAltText { .. }
         | Edit::SetTagProperty { .. }
+        | Edit::MoveTag { .. }
         | Edit::MarkDecorative { .. }
         | Edit::AddOcrText { .. }
         | Edit::SetDocumentScript { .. }
@@ -2139,6 +2147,9 @@ fn run_edit(doc: &mut pdfcraft_cos::Document, edit: &Edit, cx: &mut EditCtx) -> 
         }
         Edit::SetTagProperty { object, property, value } => {
             a11y::set_tag_property(doc, *object, *property, value.as_deref()).map_err(|e| EditError::Accessibility(e.to_string()))?;
+        }
+        Edit::MoveTag { object, anchor, placement } => {
+            a11y::move_tag(doc, *object, *anchor, *placement).map_err(|e| EditError::Accessibility(e.to_string()))?;
         }
         Edit::EditTextLine { page, line, text } => {
             pdfcraft_edit::replace_line(doc, *page, *line, text)?;
