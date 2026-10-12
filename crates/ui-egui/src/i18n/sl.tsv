@@ -2269,3 +2269,11 @@ scroll speed	Fast	Hitro
 	Tools panel side	Stran podokna z orodji
 	Add comment	Dodaj komentar
 	Change tag properties	Spremeni lastnosti oznake
+	Scan	Skeniraj
+	Sign a sheet of white paper and take a photo of it in bright, even light (use the flash). Choose the photo or drop it here: PdfCraft finds the signature and removes the paper.	Podpišite se na list belega papirja in ga fotografirajte v močni, enakomerni svetlobi (uporabite bliskavico). Izberite fotografijo ali jo spustite sem: PdfCraft poišče podpis in odstrani papir.
+	Choose photo…	Izberi fotografijo…
+	No photo chosen	Fotografija ni izbrana
+	Photo	Fotografija
+	Ink sensitivity	Občutljivost za črnilo
+	No signature was found in the frame. Move the frame over the signature or raise the ink sensitivity.	V okvirju ni bilo najdenega podpisa. Premaknite okvir nad podpis ali povečajte občutljivost za črnilo.
+	Couldn't use the photo: {e}	Fotografije ni bilo mogoče uporabiti: {e}

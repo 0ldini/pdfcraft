@@ -2228,3 +2228,11 @@ scroll speed	Fast	快
 	Tools panel side	工具面板位置
 	Add comment	添加注释
 	Change tag properties	更改标签属性
+	Scan	扫描
+	Sign a sheet of white paper and take a photo of it in bright, even light (use the flash). Choose the photo or drop it here: PdfCraft finds the signature and removes the paper.	在白纸上签名，并在明亮、均匀的光线下拍照（使用闪光灯）。选择照片或将其拖放到此处：PdfCraft 会找到签名并去除纸张背景。
+	Choose photo…	选择照片…
+	No photo chosen	未选择照片
+	Photo	照片
+	Ink sensitivity	墨迹灵敏度
+	No signature was found in the frame. Move the frame over the signature or raise the ink sensitivity.	框内未找到签名。请将框移到签名上，或提高墨迹灵敏度。
+	Couldn't use the photo: {e}	无法使用该照片：{e}

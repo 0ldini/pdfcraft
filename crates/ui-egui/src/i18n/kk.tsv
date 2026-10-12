@@ -2262,3 +2262,11 @@ scroll speed	Fast	Жылдам
 	Tools panel side	Құралдар панелінің жағы
 	Add comment	Түсініктеме қосу
 	Change tag properties	Тег қасиеттерін өзгерту
+	Scan	Сканерлеу
+	Sign a sheet of white paper and take a photo of it in bright, even light (use the flash). Choose the photo or drop it here: PdfCraft finds the signature and removes the paper.	Ақ қағаз парағына қол қойып, оны жарық әрі біркелкі жарықта суретке түсіріңіз (жарқылды қосыңыз). Суретті таңдаңыз немесе осында тастаңыз: PdfCraft қолтаңбаны тауып, қағазды алып тастайды.
+	Choose photo…	Суретті таңдау…
+	No photo chosen	Сурет таңдалмаған
+	Photo	Сурет
+	Ink sensitivity	Сия сезімталдығы
+	No signature was found in the frame. Move the frame over the signature or raise the ink sensitivity.	Жақтауда қолтаңба табылмады. Жақтауды қолтаңбаның үстіне жылжытыңыз немесе сия сезімталдығын арттырыңыз.
+	Couldn't use the photo: {e}	Суретті пайдалану мүмкін болмады: {e}

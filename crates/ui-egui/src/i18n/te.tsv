@@ -2177,3 +2177,11 @@ scroll speed	Fast	వేగంగా
 	Tools panel side	టూల్స్ ప్యానెల్ వైపు
 	Add comment	వ్యాఖ్యను జోడించు
 	Change tag properties	ట్యాగ్ లక్షణాలను మార్చు
+	Scan	స్కాన్
+	Sign a sheet of white paper and take a photo of it in bright, even light (use the flash). Choose the photo or drop it here: PdfCraft finds the signature and removes the paper.	తెల్ల కాగితంపై సంతకం చేసి, ప్రకాశవంతమైన, సమానమైన వెలుతురులో దాని ఫోటో తీయండి (ఫ్లాష్ ఉపయోగించండి). ఫోటోను ఎంచుకోండి లేదా ఇక్కడ వదలండి: PdfCraft సంతకాన్ని కనుగొని కాగితాన్ని తొలగిస్తుంది.
+	Choose photo…	ఫోటో ఎంచుకోండి…
+	No photo chosen	ఫోటో ఎంచుకోలేదు
+	Photo	ఫోటో
+	Ink sensitivity	ఇంక్ సున్నితత్వం
+	No signature was found in the frame. Move the frame over the signature or raise the ink sensitivity.	ఫ్రేమ్‌లో సంతకం కనబడలేదు. ఫ్రేమ్‌ను సంతకం మీదకు జరపండి లేదా ఇంక్ సున్నితత్వాన్ని పెంచండి.
+	Couldn't use the photo: {e}	ఫోటోను ఉపయోగించలేకపోయాం: {e}

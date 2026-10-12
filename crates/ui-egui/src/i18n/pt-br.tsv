@@ -2278,3 +2278,11 @@ scroll speed	Fast	Rápida
 	Tools panel side	Lado do painel Ferramentas
 	Add comment	Adicionar comentário
 	Change tag properties	Alterar propriedades da tag
+	Scan	Digitalizar
+	Sign a sheet of white paper and take a photo of it in bright, even light (use the flash). Choose the photo or drop it here: PdfCraft finds the signature and removes the paper.	Assine uma folha de papel branco e tire uma foto dela com luz forte e uniforme (use o flash). Escolha a foto ou solte-a aqui: o PdfCraft encontra a assinatura e remove o papel.
+	Choose photo…	Escolher foto…
+	No photo chosen	Nenhuma foto escolhida
+	Photo	Foto
+	Ink sensitivity	Sensibilidade à tinta
+	No signature was found in the frame. Move the frame over the signature or raise the ink sensitivity.	Nenhuma assinatura encontrada no quadro. Mova o quadro sobre a assinatura ou aumente a sensibilidade à tinta.
+	Couldn't use the photo: {e}	Não foi possível usar a foto: {e}

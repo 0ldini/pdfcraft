@@ -2260,3 +2260,11 @@ scroll speed	Fast	Hızlı
 	Tools panel side	Araçlar panelinin yeri
 	Add comment	Yorum ekle
 	Change tag properties	Etiket özelliklerini değiştir
+	Scan	Tara
+	Sign a sheet of white paper and take a photo of it in bright, even light (use the flash). Choose the photo or drop it here: PdfCraft finds the signature and removes the paper.	Beyaz bir kâğıda imzanızı atın ve parlak, eşit ışıkta fotoğrafını çekin (flaş kullanın). Fotoğrafı seçin veya buraya bırakın: PdfCraft imzayı bulur ve kâğıdı kaldırır.
+	Choose photo…	Fotoğraf seç…
+	No photo chosen	Fotoğraf seçilmedi
+	Photo	Fotoğraf
+	Ink sensitivity	Mürekkep hassasiyeti
+	No signature was found in the frame. Move the frame over the signature or raise the ink sensitivity.	Çerçevede imza bulunamadı. Çerçeveyi imzanın üzerine taşıyın veya mürekkep hassasiyetini artırın.
+	Couldn't use the photo: {e}	Fotoğraf kullanılamadı: {e}

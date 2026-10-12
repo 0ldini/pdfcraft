@@ -2394,3 +2394,11 @@ scroll speed	Fast	Rápida
 	Tools panel side	Lado del panel de herramientas
 	Add comment	Añadir comentario
 	Change tag properties	Cambiar propiedades de la etiqueta
+	Scan	Escanear
+	Sign a sheet of white paper and take a photo of it in bright, even light (use the flash). Choose the photo or drop it here: PdfCraft finds the signature and removes the paper.	Firme en una hoja de papel blanco y hágale una foto con luz intensa y uniforme (use el flash). Elija la foto o suéltela aquí: PdfCraft encuentra la firma y elimina el papel.
+	Choose photo…	Elegir foto…
+	No photo chosen	No se ha elegido ninguna foto
+	Photo	Foto
+	Ink sensitivity	Sensibilidad de la tinta
+	No signature was found in the frame. Move the frame over the signature or raise the ink sensitivity.	No se encontró ninguna firma en el marco. Mueva el marco sobre la firma o aumente la sensibilidad de la tinta.
+	Couldn't use the photo: {e}	No se puede usar la foto: {e}
