@@ -345,6 +345,8 @@ pub struct DuplicateDraft {
 /// Copied pages: their document's name and bytes (as it was when copied) and the pages.
 #[derive(Clone, Debug)]
 pub struct PageClip {
+    /// The document the pages were copied from: pasting back into it keeps field names.
+    pub from: DocId,
     pub name: String,
     pub bytes: std::sync::Arc<Vec<u8>>,
     pub pages: Vec<usize>,
@@ -588,6 +590,8 @@ pub struct PdfCraftApp {
     pub space_audit: Vec<pdfcraft_engine::optimize::SpaceUse>,
     /// Combine files: the files staged so far.
     pub combine_draft: Vec<combine_ui::CombineFile>,
+    /// The combine list's field-name conflict preview (computed once per list, never saved).
+    pub combine_conflicts: combine_ui::ConflictPreview,
     /// The Combine files tab: whether it is open, shown, its selection and undo history.
     pub combine_tab: combine_ui::CombineTab,
     /// The Combine files table's column order and widths (kept in the settings).
@@ -860,6 +864,7 @@ impl PdfCraftApp {
             cert_viewer: None,
             space_audit: Vec::new(),
             combine_draft: Vec::new(),
+            combine_conflicts: Default::default(),
             combine_tab: Default::default(),
             combine_columns: Default::default(),
             combine_view: Default::default(),

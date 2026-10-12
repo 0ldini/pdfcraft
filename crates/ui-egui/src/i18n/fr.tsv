@@ -1799,6 +1799,8 @@
 	{month} {y}	{month} {y}
 	Change {key}	Modifier {key}
 	Insert pages from {name}	Insérer des pages depuis {name}
+	Insert pages from {name} — 1 field renamed	Insérer des pages depuis {name} — 1 champ renommé
+	Insert pages from {name} — fields renamed	Insérer des pages depuis {name} — champs renommés
 	Fill in {name}	Remplir {name}
 	Set the image of {name}	Définir l'image de {name}
 	Edit script of {name}	Modifier le script de {name}
@@ -1956,6 +1958,7 @@
 	XFA form: its fields and its XFA data are kept in step, so other viewers show what you fill in.	Formulaire XFA : ses champs et ses données XFA restent synchronisés, afin que les autres visionneuses affichent ce que vous remplissez.
 @plural	{n} page|{n} pages	{n} page|{n} pages
 @plural	{n} field|{n} fields	{n} champ|{n} champs
+@plural	{n} field name collides with earlier files and will be renamed: {list}|{n} field names collide with earlier files and will be renamed: {list}	{n} nom de champ entre en collision avec les fichiers précédents et sera renommé : {list}|{n} noms de champs entrent en collision avec les fichiers précédents et seront renommés : {list}
 	Switch to two-page view first to show the cover page	Passez d'abord à l'affichage sur deux pages pour montrer la couverture
 	Page display: {layout}	Affichage des pages : {layout}
 	Fit to width scrolling	Défilement ajusté à la largeur

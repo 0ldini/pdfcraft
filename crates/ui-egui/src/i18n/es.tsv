@@ -1883,6 +1883,8 @@ action wizard	Start	Iniciar
 	{month} {y}	{month} de {y}
 	Change {key}	Cambiar {key}
 	Insert pages from {name}	Insertar páginas de {name}
+	Insert pages from {name} — 1 field renamed	Insertar páginas de {name} — 1 campo renombrado
+	Insert pages from {name} — fields renamed	Insertar páginas de {name} — campos renombrados
 	Fill in {name}	Rellenar {name}
 	Set the image of {name}	Definir la imagen de {name}
 	Edit script of {name}	Editar el script de {name}
@@ -2041,6 +2043,7 @@ action wizard	Start	Iniciar
 	XFA form: its fields and its XFA data are kept in step, so other viewers show what you fill in.	Formulario XFA: sus campos y sus datos XFA se mantienen sincronizados, para que otros visores muestren lo que rellenes.
 @plural	{n} page|{n} pages	{n} página|{n} páginas
 @plural	{n} field|{n} fields	{n} campo|{n} campos
+@plural	{n} field name collides with earlier files and will be renamed: {list}|{n} field names collide with earlier files and will be renamed: {list}	{n} nombre de campo coincide con el de archivos anteriores y se renombrará: {list}|{n} nombres de campo coinciden con los de archivos anteriores y se renombrarán: {list}
 	Switch to two-page view first to show the cover page	Cambia primero a la vista de dos páginas para mostrar la portada
 	Page display: {layout}	Presentación de página: {layout}
 	Fit to width scrolling	Desplazamiento ajustado al ancho

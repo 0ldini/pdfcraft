@@ -940,6 +940,8 @@
 	Insert pages from a file…	Vstavi strani iz datoteke…
 	Insert pages from file…	Vstavi strani iz datoteke…
 	Insert pages from {name}	Vstavi strani iz: {name}
+	Insert pages from {name} — 1 field renamed	Vstavi strani iz {name} — 1 polje preimenovano
+	Insert pages from {name} — fields renamed	Vstavi strani iz {name} — polja preimenovana
 	Insert text	Vstavi besedilo
 	Inserted	Vstavljeno
 	Inserted text	Vstavljeno besedilo
@@ -2269,6 +2271,7 @@ scroll speed	Fast	Hitro
 	Tools panel side	Stran podokna z orodji
 	Add comment	Dodaj komentar
 	Change tag properties	Spremeni lastnosti oznake
+@plural	{n} field name collides with earlier files and will be renamed: {list}|{n} field names collide with earlier files and will be renamed: {list}	{n} ime polja se ujema z imeni iz prejšnjih datotek in bo preimenovano: {list}|{n} imeni polj se ujemata z imeni iz prejšnjih datotek in bosta preimenovani: {list}|{n} imena polj se ujemajo z imeni iz prejšnjih datotek in bodo preimenovana: {list}|{n} imen polj se ujema z imeni iz prejšnjih datotek in bo preimenovanih: {list}
 	Scan	Skeniraj
 	Sign a sheet of white paper and take a photo of it in bright, even light (use the flash). Choose the photo or drop it here: PdfCraft finds the signature and removes the paper.	Podpišite se na list belega papirja in ga fotografirajte v močni, enakomerni svetlobi (uporabite bliskavico). Izberite fotografijo ali jo spustite sem: PdfCraft poišče podpis in odstrani papir.
 	Choose photo…	Izberi fotografijo…
