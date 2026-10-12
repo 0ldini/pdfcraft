@@ -2284,6 +2284,16 @@ animation effects	Off	Desativados
 	Original	Original
 	Greyscale	Escala de cinza
 	Black and white	Preto e branco
+	Reading colours	Cores de leitura
+	Replace document colours	Substituir as cores do documento
+	Black on white	Preto no branco
+	White on black	Branco no preto
+	Yellow on black	Amarelo no preto
+	Green on black	Verde no preto
+	Page background	Fundo da página
+	Only change the colour of black text or line art	Alterar apenas a cor do texto preto e dos traços
+	Change the colour of line art as well as text	Alterar também a cor dos traços, além do texto
+	Colours are remapped while rendering; the document itself never changes.	As cores são remapeadas na renderização; o documento em si nunca muda.
 	This printer's driver doesn't take two-sided settings from other programs, so its own setting applies. Change it in Properties…	O driver desta impressora não aceita configurações de frente e verso de outros programas, então vale a configuração dele. Altere em Propriedades…
 	Browser's print dialog	Caixa de diálogo de impressão do navegador
 	Copies, two-sided printing and colour are chosen in the browser's print dialog.	Cópias, impressão frente e verso e cor são escolhidas na caixa de diálogo de impressão do navegador.

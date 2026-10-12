@@ -2234,6 +2234,16 @@ animation effects	Off	关
 	Original	原始
 	Greyscale	灰度
 	Black and white	黑白
+	Reading colours	阅读配色
+	Replace document colours	替换文档颜色
+	Black on white	白底黑字
+	White on black	黑底白字
+	Yellow on black	黑底黄字
+	Green on black	黑底绿字
+	Page background	页面背景
+	Only change the colour of black text or line art	仅更改黑色文本和线条的颜色
+	Change the colour of line art as well as text	除文本外也更改线条的颜色
+	Colours are remapped while rendering; the document itself never changes.	颜色仅在渲染时替换；文档本身不会改变。
 	This printer's driver doesn't take two-sided settings from other programs, so its own setting applies. Change it in Properties…	此打印机的驱动程序不接受其他程序的双面打印设置，因此使用其自身设置。更改位置：属性…
 	Browser's print dialog	浏览器的打印对话框
 	Copies, two-sided printing and colour are chosen in the browser's print dialog.	份数、双面打印和颜色在浏览器的打印对话框中选择。

@@ -2270,6 +2270,16 @@ animation effects	Off	Désactivés
 	Original	Original
 	Greyscale	Niveaux de gris
 	Black and white	Noir et blanc
+	Reading colours	Couleurs de lecture
+	Replace document colours	Remplacer les couleurs du document
+	Black on white	Noir sur blanc
+	White on black	Blanc sur noir
+	Yellow on black	Jaune sur noir
+	Green on black	Vert sur noir
+	Page background	Arrière-plan de la page
+	Only change the colour of black text or line art	Ne changer que la couleur du texte noir et des traits
+	Change the colour of line art as well as text	Changer aussi la couleur des traits, en plus du texte
+	Colours are remapped while rendering; the document itself never changes.	Les couleurs sont réaffectées au rendu ; le document lui-même ne change jamais.
 	This printer's driver doesn't take two-sided settings from other programs, so its own setting applies. Change it in Properties…	Le pilote de cette imprimante n'accepte pas les réglages recto verso des autres programmes ; son propre réglage s'applique. Modifiez-le dans Propriétés…
 	Browser's print dialog	Boîte de dialogue d'impression du navigateur
 	Copies, two-sided printing and colour are chosen in the browser's print dialog.	Le nombre de copies, l'impression recto verso et la couleur se choisissent dans la boîte de dialogue d'impression du navigateur.
