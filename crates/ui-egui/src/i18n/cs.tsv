@@ -2390,6 +2390,12 @@ animation effects	Off	Vypnuto
 	Ink sensitivity	Citlivost na inkoust
 	No signature was found in the frame. Move the frame over the signature or raise the ink sensitivity.	V rámečku nebyl nalezen žádný podpis. Přesuňte rámeček na podpis nebo zvyšte citlivost na inkoust.
 	Couldn't use the photo: {e}	Fotografii nelze použít: {e}
+
+# PDF tab context menu (#1233)
+	Close Tab	Zavřít kartu
+	Reopen Closed Tab	Znovu otevřít zavřenou kartu
+	Reveal in Finder	Zobrazit ve Finderu
+	Reveal in File Explorer	Zobrazit v Průzkumníku souborů
 	Other colour…	Jiná barva…
 	Recent colours	Nedávné barvy
 	Couldn't follow linked PDF: {reason}	Odkazovaný PDF nelze otevřít: {reason}

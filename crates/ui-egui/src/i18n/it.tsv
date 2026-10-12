@@ -2325,6 +2325,12 @@ animation effects	Off	Disattivati
 	Ink sensitivity	Sensibilità all’inchiostro
 	No signature was found in the frame. Move the frame over the signature or raise the ink sensitivity.	Nessuna firma trovata nella cornice. Sposta la cornice sulla firma o aumenta la sensibilità all’inchiostro.
 	Couldn't use the photo: {e}	Impossibile usare la foto: {e}
+
+# PDF tab context menu (#1233)
+	Close Tab	Chiudi scheda
+	Reopen Closed Tab	Riapri scheda chiusa
+	Reveal in Finder	Mostra nel Finder
+	Reveal in File Explorer	Mostra in Esplora file
 	Other colour…	Altro colore…
 	Recent colours	Colori recenti
 	Couldn't follow linked PDF: {reason}	Impossibile aprire il PDF collegato: {reason}

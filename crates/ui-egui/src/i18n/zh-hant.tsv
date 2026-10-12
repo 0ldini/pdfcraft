@@ -2179,6 +2179,12 @@ animation effects	Off	關
 	Ink sensitivity	墨跡靈敏度
 	No signature was found in the frame. Move the frame over the signature or raise the ink sensitivity.	框內找不到簽名。請將框移到簽名上，或提高墨跡靈敏度。
 	Couldn't use the photo: {e}	無法使用此相片：{e}
+
+# PDF tab context menu (#1233)
+	Close Tab	關閉分頁
+	Reopen Closed Tab	重新開啟已關閉的分頁
+	Reveal in Finder	在 Finder 中顯示
+	Reveal in File Explorer	在檔案總管中顯示
 	Other colour…	其他顏色…
 	Recent colours	最近使用的顏色
 	Reading colours	閱讀色彩
