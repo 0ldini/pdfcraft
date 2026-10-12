@@ -180,7 +180,7 @@ pub fn hand(resp: Response) -> Response {
 }
 
 pub fn install_fonts(ctx: &egui::Context) {
-    ctx.set_fonts(font_definitions());
+    install_fonts_for(ctx, CjkPreference::Default);
 }
 
 /// The interface language's claim on the CJK fallback faces.
@@ -213,6 +213,8 @@ pub fn install_fonts_for(ctx: &egui::Context, cjk: CjkPreference) {
 
 /// The name of the installed face [`installed_font_definitions`] may add after the embedded ones.
 pub const SYSTEM_FALLBACK: &str = "system-fallback";
+/// The name of the installed Devanagari (Hindi) face [`installed_font_definitions`] may add.
+pub const SYSTEM_DEVANAGARI_FALLBACK: &str = "system-devanagari-fallback";
 
 /// What [`install_fonts_for`] installs: [`font_definitions_for`], then, on desktop, one face
 /// already installed on this machine. It only draws characters no embedded face has.
@@ -225,13 +227,23 @@ pub const SYSTEM_FALLBACK: &str = "system-fallback";
 /// - Otherwise it is the last fallback of every family (an Arabic file name in a build without
 ///   craft-fonts).
 ///
-/// `PDFCRAFT_SYSTEM_FONTS=0` leaves it out.
+/// An installed Devanagari face, when there is one, ends every family just before that one, so
+/// Hindi text draws in a build without a Devanagari face.
+///
+/// `PDFCRAFT_SYSTEM_FONTS=0` leaves them out.
 pub fn installed_font_definitions(cjk: CjkPreference) -> FontDefinitions {
     #[cfg_attr(target_arch = "wasm32", expect(unused_mut))]
     let mut fonts = font_definitions_for(cjk == CjkPreference::SimplifiedChinese);
     #[cfg(not(target_arch = "wasm32"))]
     {
         use crate::system_fonts::{Need, fallback};
+        // Before the general installed face, which stays the last fallback outside Chinese.
+        if let Some(data) = crate::system_fonts::devanagari_fallback() {
+            fonts.font_data.insert(SYSTEM_DEVANAGARI_FALLBACK.to_owned(), data);
+            for stack in fonts.families.values_mut() {
+                stack.push(SYSTEM_DEVANAGARI_FALLBACK.to_owned());
+            }
+        }
         let need = match cjk {
             _ if !pdfcraft_fonts::ui_chinese_fonts().is_empty() => Need::Other,
             CjkPreference::SimplifiedChinese => Need::Hans,
